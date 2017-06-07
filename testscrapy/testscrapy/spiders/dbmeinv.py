@@ -11,7 +11,7 @@ class DbmeinvSpider(scrapy.Spider):
 
     def parse(self, response):
 	item = TestscrapyItem()
-        selector = scrapy.Selector(response)
+    selector = scrapy.Selector(response)
 	items = selector.xpath('//div[@class="thumbnail"]')
 	for each in items:
 		#title = re.search('<img class="height_min" title="(.*?)"',item.extract()).group(1)
